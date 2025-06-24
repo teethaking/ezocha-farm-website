@@ -24,20 +24,20 @@ function Donation() {
   };
 
   return (
-    <section id="donation" className="py-16 bg-farm-green/10">
-      <div className="container mx-auto text-center">
+    <section id="donation" className="py-16 bg-farm-cream">
+      <div className="container mx-auto text-center px-4">
         <h2 className="text-3xl font-bold mb-6 text-farm-green">Support Our Mission</h2>
-        <p className="text-lg mb-4 text-gray-700">Contribute to our vision of food security via Ethereum donations.</p>
+        <p className="text-lg mb-8 text-gray-700">Help us advance food security with an Ethereum donation.</p>
         <input
           type="text"
           placeholder="Enter Ethereum address"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
-          className="w-full max-w-md p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-farm-gold mb-4"
+          className="w-full max-w-md p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-farm-green mb-4"
         />
         <button
           onClick={validateAddress}
-          className="bg-farm-gold text-farm-green py-2 px-6 rounded-md hover:bg-farm-brown hover:text-white transition glow"
+          className="bg-farm-green text-white py-3 px-8 rounded-md hover:bg-farm-brown transition glow"
         >
           Validate Address
         </button>

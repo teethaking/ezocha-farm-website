@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        'farm-green': '#2E7D32', // Deep green for agriculture
-        'farm-gold': '#F4A261',  // Gold for harvest
-        'farm-brown': '#8B4513', // Earthy brown
+        'farm-green': '#1A3C34', // Deep green for rustic feel
+        'farm-cream': '#FDF6E3', // Cream for backgrounds
+        'farm-brown': '#4A3728', // Earthy brown
       },
     },
   },
