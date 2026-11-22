@@ -1,12 +1,35 @@
-# React + Vite
+# Ezocha Farm Services Ltd — Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official website for **Ezocha Farm Services Ltd**, a dynamic agribusiness
+one-stop service provider based in Nigeria.
 
-Currently, two official plugins are available:
+> Empowering Agriculture • Transforming Communities • Securing the Future
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What it is
 
-## Expanding the ESLint configuration
+A fast, responsive single-page site built with plain HTML, CSS and JavaScript —
+no build step, no framework. Sections:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Hero with farm imagery and key stats
+- About — who we are, vision & mission
+- Core objectives
+- Services — farming operations, capacity building, farm establishment &
+  management, farm inputs, processing & packaging, market linkages
+- Partners & associates
+- Contact — phone and email
+
+## Run locally
+
+```bash
+python3 -m http.server 8321
+# open http://localhost:8321
+```
+
+## Deploy
+
+The site is deployed on Vercel from this repo (static site, no build command).
+
+## Contact
+
+- Phone: [+234 803 500 4617](tel:+2348035004617)
+- Email: [learnder@gmail.com](mailto:learnder@gmail.com)

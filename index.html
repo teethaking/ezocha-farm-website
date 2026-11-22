@@ -1,13 +1,246 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ezocha Farm Services Ltd — Empowering Agriculture, Transforming Communities</title>
+  <meta name="description" content="Ezocha Farm Services Ltd is a dynamic agribusiness one-stop service provider — farm establishment and management, capacity building, farm inputs, processing & packaging, and market linkages across Nigeria and Africa." />
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Ezocha Farm Services Ltd — home">
+        <img class="brand-logo" src="assets/logo.jpg" alt="Ezocha Farm Services Ltd logo" />
+        <span class="brand-text"><strong>EZOCHA</strong><small>Farm Service Ltd</small></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#partners">Partners</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary btn-sm" href="#contact">Get in Touch</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-bg" role="img" aria-label="Golden farmland at sunset"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="hero-eyebrow reveal">🌱 Agribusiness One-Stop Service Provider</p>
+      <h1 class="reveal">Empowering Agriculture.<br />Transforming Communities.<br /><span>Securing the Future.</span></h1>
+      <p class="hero-sub reveal">Ezocha Farm Services Ltd supports the establishment, operation and sustainable management of agricultural enterprises — making nutritious food available, accessible and affordable across Nigeria and Africa.</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="#services">Explore Our Services</a>
+        <a class="btn btn-ghost" href="#contact">Talk to Us →</a>
+      </div>
+      <dl class="hero-stats reveal">
+        <div><dt>Services</dt><dd><span data-count="6">0</span></dd></div>
+        <div><dt>Partners &amp; Associates</dt><dd><span data-count="7">0</span></dd></div>
+        <div><dt>Value-chain areas</dt><dd><span data-count="8">0</span>+</dd></div>
+      </dl>
+    </div>
+    <a class="scroll-hint" href="#about" aria-label="Scroll down">↓</a>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Farm Establishment</span><i>✦</i><span>Capacity Building</span><i>✦</i><span>Processing &amp; Packaging</span><i>✦</i><span>Farm Inputs</span><i>✦</i><span>Market Linkages</span><i>✦</i><span>Agroforestry</span><i>✦</i><span>Warehousing</span><i>✦</i><span>Farmland Leasing</span><i>✦</i>
+      <span>Farm Establishment</span><i>✦</i><span>Capacity Building</span><i>✦</i><span>Processing &amp; Packaging</span><i>✦</i><span>Farm Inputs</span><i>✦</i><span>Market Linkages</span><i>✦</i><span>Agroforestry</span><i>✦</i><span>Warehousing</span><i>✦</i><span>Farmland Leasing</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-media reveal">
+        <img src="assets/logo.jpg" alt="Ezocha Farm Services Ltd — pawpaw, maize, mango and palm" />
+        <div class="about-badge">
+          <strong>Since day one</strong>
+          <span>Passion for food security</span>
+        </div>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow reveal">Who We Are</p>
+        <h2 class="reveal">An agribusiness one-stop shop for the business of agriculture.</h2>
+        <p class="reveal">We support the establishment, operation and management of agricultural businesses — promoting investment across the value chain: research, agricultural tourism, mechanization, processing and packaging, warehousing and farmland leasing for food and job security.</p>
+        <p class="reveal">We bridge the gap between farmers, research institutes, stakeholders, government agencies, international organizations, investors and local communities — in the quest for an improved and secure nutritional food system.</p>
+        <div class="vm-grid">
+          <article class="vm-card reveal">
+            <h3>Our Vision</h3>
+            <p>To be a leading agribusiness service provider, empowering sustainable farming practices and improving the lives of farmers, communities and consumers — while increasing youth participation in the business of agriculture.</p>
+          </article>
+          <article class="vm-card reveal">
+            <h3>Our Mission</h3>
+            <p>To deliver innovative, sustainable and technology-driven services that enhance the productivity, profitability and well-being of farmers, while promoting environmental stewardship and a food-secure future.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OBJECTIVES ============ -->
+  <section class="section objectives">
+    <div class="container">
+      <p class="eyebrow reveal">Core Objectives</p>
+      <h2 class="section-title reveal">What we work towards, every day</h2>
+      <div class="obj-grid">
+        <article class="obj-card reveal"><span class="obj-num">01</span><h3>Farmer Productivity</h3><p>Access to innovative technologies, best practices and expert advice to enhance productivity and efficiency.</p></article>
+        <article class="obj-card reveal"><span class="obj-num">02</span><h3>Farmer Profitability</h3><p>Services that help farmers increase income, reduce costs and improve overall profitability.</p></article>
+        <article class="obj-card reveal"><span class="obj-num">03</span><h3>Environmental Stewardship</h3><p>Sustainable practices that minimize environmental impact, conserve natural resources and promote ecosystem health.</p></article>
+        <article class="obj-card reveal"><span class="obj-num">04</span><h3>Farmer Well-being</h3><p>Services that promote the health, safety and well-being of farmers, their families and their communities.</p></article>
+        <article class="obj-card reveal"><span class="obj-num">05</span><h3>A Food-Secure Future</h3><p>Collaboration with stakeholders so everyone has access to nutritious, sustainable and affordable food.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section services" id="services">
+    <div class="container">
+      <p class="eyebrow reveal">Our Services</p>
+      <h2 class="section-title reveal">End-to-end support across the agricultural value chain</h2>
+      <p class="section-sub reveal">From the first seed to the final sale — we walk with you at every stage.</p>
+      <div class="svc-grid">
+        <article class="svc-card reveal">
+          <img src="assets/research.jpg" alt="Farmers harvesting in a green field" loading="lazy" />
+          <div class="svc-body"><h3>Farming Operations</h3><p>Farming for dual purpose — commercial food production and agricultural demonstration, showcasing modern and sustainable methods.</p></div>
+        </article>
+        <article class="svc-card reveal">
+          <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=1200&auto=format&fit=crop" alt="Seedlings growing in nursery trays" loading="lazy" />
+          <div class="svc-body"><h3>Capacity Building &amp; Extension</h3><p>Formal and informal training, workshops, consultancy and extension services tailored to individuals, cooperatives, institutions and organizations.</p></div>
+        </article>
+        <article class="svc-card reveal">
+          <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1200&auto=format&fit=crop" alt="Vast green crop rows under a wide sky" loading="lazy" />
+          <div class="svc-body"><h3>Farm Establishment &amp; Management</h3><p>Establishing and professionally managing crop farms, livestock farms and agroforestry projects for individuals, companies and institutions.</p></div>
+        </article>
+        <article class="svc-card reveal">
+          <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=80&w=1200&auto=format&fit=crop" alt="Lush green crop field beside a golden field" loading="lazy" />
+          <div class="svc-body"><h3>Farm Inputs Supply</h3><p>Quality-certified seeds, seedlings, fertilizers, agrochemicals and improved technologies — because good output starts with guaranteed inputs.</p></div>
+        </article>
+        <article class="svc-card reveal">
+          <img src="assets/processing.jpg" alt="Ezocha Farms packaged organic tomatoes" loading="lazy" />
+          <div class="svc-body"><h3>Processing &amp; Packaging</h3><p>We add value to produce — sweet potatoes, millet, sorghum and more — for premium prices and to manage post-harvest losses.</p></div>
+        </article>
+        <article class="svc-card reveal">
+          <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=1200&auto=format&fit=crop" alt="Tractor working a green paddy field with palm trees" loading="lazy" />
+          <div class="svc-body"><h3>Agribusiness &amp; Market Linkages</h3><p>We bring farmers, investors, processors, buyers and institutions together for profitable, sustainable relationships.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUOTE BANNER ============ -->
+  <section class="quote-banner">
+    <div class="container">
+      <blockquote class="reveal">“At Ezocha Farm Services Ltd, we believe that youths are the future of agribusiness.”</blockquote>
+      <p class="reveal">Agriculture is not just food production — it is a catalyst for economic transformation, youth empowerment and national development.</p>
+    </div>
+  </section>
+
+  <!-- ============ WHY US ============ -->
+  <section class="section why" id="why-us">
+    <div class="container why-grid">
+      <div>
+        <p class="eyebrow reveal">Why Choose Ezocha?</p>
+        <h2 class="reveal">The partner you want in the business of agriculture</h2>
+        <p class="reveal">We combine professional expertise with strong institutional partnerships and a genuine commitment to the people who grow our food.</p>
+        <ul class="why-list">
+          <li class="reveal">Professional agribusiness expertise</li>
+          <li class="reveal">Innovative, technology-driven solutions</li>
+          <li class="reveal">Strong stakeholder &amp; institutional partnerships</li>
+          <li class="reveal">Commitment to food security &amp; sustainability</li>
+          <li class="reveal">Youth-focused agricultural empowerment</li>
+          <li class="reveal">Reliable farm establishment &amp; management</li>
+          <li class="reveal">End-to-end support across the value chain</li>
+        </ul>
+      </div>
+      <div class="why-media reveal">
+        <img src="assets/tourism.jpg" alt="Farmers smiling in a maize field with a basket of corn" loading="lazy" />
+        <div class="why-card">
+          <strong>One-stop shop</strong>
+          <span>Research · Mechanization · Processing · Warehousing · Leasing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTNERS ============ -->
+  <section class="section partners" id="partners">
+    <div class="container">
+      <p class="eyebrow reveal">Partners &amp; Associates</p>
+      <h2 class="section-title reveal">Working together for a stronger food system</h2>
+      <div class="partner-grid">
+        <span class="partner-chip reveal">WCCI Agric Hub</span>
+        <span class="partner-chip reveal">Faculty of Agriculture, Abuja University</span>
+        <span class="partner-chip reveal">Nigerian Army Farms &amp; Ranch Ltd, Giri</span>
+        <span class="partner-chip reveal">Eurafrican-Alliance e.v.</span>
+        <span class="partner-chip reveal">College of Agribusiness, Ibadan</span>
+        <span class="partner-chip reveal">Interweave Solution International</span>
+        <span class="partner-chip reveal">Urban Agriculture Practitioners Association of Nigeria</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="container contact-inner">
+      <p class="eyebrow reveal">Get in Touch</p>
+      <h2 class="reveal">Let’s grow something together.</h2>
+      <p class="reveal">Whether you want to establish a farm, train your team, source quality inputs or find buyers for your produce — start the conversation today.</p>
+      <div class="contact-cards">
+        <a class="contact-card reveal" href="tel:+2348035004617">
+          <span class="contact-icon">📞</span>
+          <strong>Call Us</strong>
+          <span>0803 500 4617</span>
+        </a>
+        <a class="contact-card reveal" href="mailto:learnder@gmail.com">
+          <span class="contact-icon">✉️</span>
+          <strong>Email Us</strong>
+          <span>learnder@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.jpg" alt="Ezocha Farm Services Ltd logo" />
+        <p><strong>EZOCHA FARM SERVICE LTD</strong><br />Agribusiness One-Stop Service Provider</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#partners">Partners</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="tel:+2348035004617">0803 500 4617</a>
+        <a href="mailto:learnder@gmail.com">learnder@gmail.com</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year">2026</span> Ezocha Farm Services Ltd. All rights reserved.</span>
+      <span>Empowering Agriculture • Transforming Communities • Securing the Future</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
