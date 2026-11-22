@@ -134,7 +134,7 @@ a { color: inherit; text-decoration: none; }
 .about { background: var(--cream); }
 .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 3.5rem; align-items: start; }
 .about-media { position: relative; }
-.about-media img { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; aspect-ratio: 1; object-fit: cover; }
+.about-media img { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; aspect-ratio: 11 / 10; object-fit: cover; }
 .about-badge {
   position: absolute; left: -1rem; bottom: 1.5rem; background: var(--green-800); color: var(--white);
   border-radius: 14px; padding: 1rem 1.3rem; box-shadow: var(--shadow);
