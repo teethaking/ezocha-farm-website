@@ -89,8 +89,11 @@
 
   // Hero parallax + scroll progress bar + back-to-top (one rAF-throttled scroll handler)
   var heroBg = document.getElementById("heroBg");
+  var heroVideo = document.getElementById("heroVideo");
   var progressBar = document.getElementById("progressBar");
   var toTop = document.getElementById("toTop");
+  // Live grass video: pause it for reduced motion (the farm photo stays behind it)
+  if (reduceMotion && heroVideo) heroVideo.pause();
   var ticking = false;
   var onScrollFx = function () {
     if (ticking) return;
@@ -100,8 +103,9 @@
       var max = document.documentElement.scrollHeight - window.innerHeight;
       progressBar.style.width = (max > 0 ? (y / max) * 100 : 0) + "%";
       toTop.classList.toggle("show", y > 600);
-      if (!reduceMotion && heroBg && y < window.innerHeight) {
-        heroBg.style.backgroundPosition = "center " + Math.round(y * 0.25) + "px";
+      if (!reduceMotion && heroVideo && y < window.innerHeight) {
+        // `translate` moves the video without touching its scale transform
+        heroVideo.style.translate = "0 " + Math.round(y * 0.2) + "px";
       }
       ticking = false;
     });
