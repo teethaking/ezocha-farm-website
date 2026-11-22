@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ezocha Farm Services Ltd — Empowering Agriculture, Transforming Communities</title>
   <meta name="description" content="Ezocha Farm Services Ltd is a dynamic agribusiness one-stop service provider — farm establishment and management, capacity building, farm inputs, processing & packaging, and market linkages across Nigeria and Africa." />
+  <meta name="theme-color" content="#0b3d20" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ezocha Farm Services Ltd — Empowering Agriculture, Transforming Communities" />
+  <meta property="og:description" content="Agribusiness one-stop service provider: farm establishment & management, capacity building, farm inputs, processing & packaging, and market linkages across Nigeria and Africa." />
+  <meta property="og:url" content="https://ezocha-farm-website.vercel.app/" />
+  <meta property="og:image" content="https://ezocha-farm-website.vercel.app/assets/logo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ezocha Farm Services Ltd" />
+  <meta name="twitter:description" content="Empowering Agriculture • Transforming Communities • Securing the Future" />
+  <meta name="twitter:image" content="https://ezocha-farm-website.vercel.app/assets/logo.jpg" />
   <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +22,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
   <!-- ============ NAV ============ -->
   <header class="nav" id="top">
     <div class="container nav-inner">
@@ -22,8 +34,10 @@
       <nav class="nav-links" id="navLinks" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#produce">Produce</a>
         <a href="#why-us">Why Us</a>
         <a href="#partners">Partners</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="nav-actions">
@@ -37,17 +51,21 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero">
-    <div class="hero-bg" role="img" aria-label="Golden farmland at sunset"></div>
+    <div class="hero-bg" id="heroBg" role="img" aria-label="Rolling green farmland under a blue sky"></div>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
-      <p class="hero-eyebrow reveal">🌱 Agribusiness One-Stop Service Provider</p>
-      <h1 class="reveal">Empowering Agriculture.<br />Transforming Communities.<br /><span>Securing the Future.</span></h1>
-      <p class="hero-sub reveal">Ezocha Farm Services Ltd supports the establishment, operation and sustainable management of agricultural enterprises — making nutritious food available, accessible and affordable across Nigeria and Africa.</p>
-      <div class="hero-cta reveal">
+      <p class="hero-eyebrow">🌱 Agribusiness One-Stop Service Provider</p>
+      <h1>
+        <span class="hero-line">Empowering Agriculture.</span>
+        <span class="hero-line">Transforming Communities.</span>
+        <span class="hero-line"><span class="hero-accent">Securing the Future.</span></span>
+      </h1>
+      <p class="hero-sub">Ezocha Farm Services Ltd supports the establishment, operation and sustainable management of agricultural enterprises — making nutritious food available, accessible and affordable across Nigeria and Africa.</p>
+      <div class="hero-cta">
         <a class="btn btn-primary" href="#services">Explore Our Services</a>
         <a class="btn btn-ghost" href="#contact">Talk to Us →</a>
       </div>
-      <dl class="hero-stats reveal">
+      <dl class="hero-stats">
         <div><dt>Services</dt><dd><span data-count="6">0</span></dd></div>
         <div><dt>Partners &amp; Associates</dt><dd><span data-count="7">0</span></dd></div>
         <div><dt>Value-chain areas</dt><dd><span data-count="8">0</span>+</dd></div>
@@ -93,6 +111,16 @@
     </div>
   </section>
 
+  <!-- ============ STATS BAND ============ -->
+  <section class="stats-band" aria-label="Ezocha at a glance">
+    <div class="container stats-grid">
+      <div class="stat reveal"><strong><span data-count="6">0</span></strong><span>Services across the value chain</span></div>
+      <div class="stat reveal"><strong><span data-count="7">0</span></strong><span>Partners &amp; associates</span></div>
+      <div class="stat reveal"><strong><span data-count="5">0</span></strong><span>Core objectives we work towards</span></div>
+      <div class="stat reveal"><strong><span data-count="8">0</span>+</strong><span>Value-chain areas covered</span></div>
+    </div>
+  </section>
+
   <!-- ============ OBJECTIVES ============ -->
   <section class="section objectives">
     <div class="container">
@@ -113,32 +141,81 @@
     <div class="container">
       <p class="eyebrow reveal">Our Services</p>
       <h2 class="section-title reveal">End-to-end support across the agricultural value chain</h2>
-      <p class="section-sub reveal">From the first seed to the final sale — we walk with you at every stage.</p>
+      <p class="section-sub reveal">From the first seed to the final sale — we walk with you at every stage. Tap a service to see more.</p>
       <div class="svc-grid">
-        <article class="svc-card reveal">
+        <article class="svc-card reveal" data-tilt>
           <img src="assets/research.jpg" alt="Farmers harvesting in a green field" loading="lazy" />
-          <div class="svc-body"><h3>Farming Operations</h3><p>Farming for dual purpose — commercial food production and agricultural demonstration, showcasing modern and sustainable methods.</p></div>
+          <div class="svc-body">
+            <h3>Farming Operations</h3>
+            <p>Farming for dual purpose — commercial food production and agricultural demonstration, showcasing modern and sustainable methods.</p>
+            <div class="svc-more"><p>Our farms produce food for the market and serve as demonstration sites where modern, sustainable methods are showcased in practice.</p></div>
+            <button class="svc-toggle" aria-expanded="false">Learn more <span aria-hidden="true">+</span></button>
+          </div>
         </article>
-        <article class="svc-card reveal">
+        <article class="svc-card reveal" data-tilt>
           <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=1200&auto=format&fit=crop" alt="Seedlings growing in nursery trays" loading="lazy" />
-          <div class="svc-body"><h3>Capacity Building &amp; Extension</h3><p>Formal and informal training, workshops, consultancy and extension services tailored to individuals, cooperatives, institutions and organizations.</p></div>
+          <div class="svc-body">
+            <h3>Capacity Building &amp; Extension</h3>
+            <p>Formal and informal training, workshops, consultancy and extension services tailored to individuals, cooperatives, institutions and organizations.</p>
+            <div class="svc-more"><p>Workshops, consultancy and extension services for individuals, cooperatives, institutions and organizations — formal and informal, tailored to your needs.</p></div>
+            <button class="svc-toggle" aria-expanded="false">Learn more <span aria-hidden="true">+</span></button>
+          </div>
         </article>
-        <article class="svc-card reveal">
+        <article class="svc-card reveal" data-tilt>
           <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1200&auto=format&fit=crop" alt="Vast green crop rows under a wide sky" loading="lazy" />
-          <div class="svc-body"><h3>Farm Establishment &amp; Management</h3><p>Establishing and professionally managing crop farms, livestock farms and agroforestry projects for individuals, companies and institutions.</p></div>
+          <div class="svc-body">
+            <h3>Farm Establishment &amp; Management</h3>
+            <p>Establishing and professionally managing crop farms, livestock farms and agroforestry projects for individuals, companies and institutions.</p>
+            <div class="svc-more"><p>From land preparation to harvest, we handle the establishment and day-to-day management of crop, livestock and agroforestry projects.</p></div>
+            <button class="svc-toggle" aria-expanded="false">Learn more <span aria-hidden="true">+</span></button>
+          </div>
         </article>
-        <article class="svc-card reveal">
+        <article class="svc-card reveal" data-tilt>
           <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?q=80&w=1200&auto=format&fit=crop" alt="Lush green crop field beside a golden field" loading="lazy" />
-          <div class="svc-body"><h3>Farm Inputs Supply</h3><p>Quality-certified seeds, seedlings, fertilizers, agrochemicals and improved technologies — because good output starts with guaranteed inputs.</p></div>
+          <div class="svc-body">
+            <h3>Farm Inputs Supply</h3>
+            <p>Quality-certified seeds, seedlings, fertilizers, agrochemicals and improved technologies — because good output starts with guaranteed inputs.</p>
+            <div class="svc-more"><p>Seeds, seedlings, fertilizers and agrochemicals — certified, scientifically and technologically improved, so your output is guaranteed.</p></div>
+            <button class="svc-toggle" aria-expanded="false">Learn more <span aria-hidden="true">+</span></button>
+          </div>
         </article>
-        <article class="svc-card reveal">
+        <article class="svc-card reveal" data-tilt>
           <img src="assets/processing.jpg" alt="Ezocha Farms packaged organic tomatoes" loading="lazy" />
-          <div class="svc-body"><h3>Processing &amp; Packaging</h3><p>We add value to produce — sweet potatoes, millet, sorghum and more — for premium prices and to manage post-harvest losses.</p></div>
+          <div class="svc-body">
+            <h3>Processing &amp; Packaging</h3>
+            <p>We add value to produce — sweet potatoes, millet, sorghum and more — for premium prices and to manage post-harvest losses.</p>
+            <div class="svc-more"><p>We process sweet potatoes, millet, sorghum and more into market-ready products — premium prices, fewer post-harvest losses.</p></div>
+            <button class="svc-toggle" aria-expanded="false">Learn more <span aria-hidden="true">+</span></button>
+          </div>
         </article>
-        <article class="svc-card reveal">
+        <article class="svc-card reveal" data-tilt>
           <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=1200&auto=format&fit=crop" alt="Tractor working a green paddy field with palm trees" loading="lazy" />
-          <div class="svc-body"><h3>Agribusiness &amp; Market Linkages</h3><p>We bring farmers, investors, processors, buyers and institutions together for profitable, sustainable relationships.</p></div>
+          <div class="svc-body">
+            <h3>Agribusiness &amp; Market Linkages</h3>
+            <p>We bring farmers, investors, processors, buyers and institutions together for profitable, sustainable relationships.</p>
+            <div class="svc-more"><p>We connect you with buyers, processors, investors and institutions, building profitable relationships across the value chain.</p></div>
+            <button class="svc-toggle" aria-expanded="false">Learn more <span aria-hidden="true">+</span></button>
+          </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCE ============ -->
+  <section class="section produce" id="produce">
+    <div class="container">
+      <p class="eyebrow reveal">What We Grow</p>
+      <h2 class="section-title reveal">Fresh from our farms to your table</h2>
+      <p class="section-sub reveal">The crops and produce at the heart of what we do — grown, harvested and processed with care.</p>
+      <div class="produce-grid">
+        <article class="produce-card reveal"><img src="assets/maize.jpg" alt="Freshly harvested maize cobs" loading="lazy" /><div><h3>Maize</h3><p>Staple grain, grown and harvested at scale.</p></div></article>
+        <article class="produce-card reveal"><img src="assets/papaya.jpg" alt="Ripe pawpaw, halved to show orange flesh" loading="lazy" /><div><h3>Pawpaw</h3><p>Fresh, nutrient-rich fruit.</p></div></article>
+        <article class="produce-card reveal"><img src="assets/mango.jpg" alt="Ripe mango with golden flesh" loading="lazy" /><div><h3>Mango</h3><p>Sweet, sun-ripened mangoes.</p></div></article>
+        <article class="produce-card reveal"><img src="assets/palm.jpg" alt="Harvested palm oil fruit bunch" loading="lazy" /><div><h3>Palm Fruit</h3><p>For palm oil and agro-processing.</p></div></article>
+        <article class="produce-card reveal"><img src="assets/processing.jpg" alt="Ezocha Farms packaged organic tomatoes" loading="lazy" /><div><h3>Tomatoes</h3><p>Organic and fresh, packaged ready for market.</p></div></article>
+        <article class="produce-card reveal"><img src="assets/sweet-potato.jpg" alt="Basket of freshly harvested sweet potatoes" loading="lazy" /><div><h3>Sweet Potatoes</h3><p>Processed and packaged for premium prices.</p></div></article>
+        <article class="produce-card reveal"><img src="assets/millet.jpg" alt="Millet ears and a sack of millet grain" loading="lazy" /><div><h3>Millet</h3><p>Hardy grain for food and processing.</p></div></article>
+        <article class="produce-card reveal"><img src="assets/sorghum.jpg" alt="Mature sorghum field" loading="lazy" /><div><h3>Sorghum</h3><p>Versatile grain, grown for food and feed.</p></div></article>
       </div>
     </div>
   </section>
@@ -178,6 +255,28 @@
     </div>
   </section>
 
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section testimonials">
+    <div class="container">
+      <p class="eyebrow reveal">What People Say</p>
+      <h2 class="section-title reveal">Trusted by farmers, investors and communities</h2>
+      <div class="testi-grid">
+        <figure class="testi-card reveal">
+          <blockquote>“Ezocha's research services transformed our crop yields!”</blockquote>
+          <figcaption><strong>Farmer Adebayo</strong><span>Farmer</span></figcaption>
+        </figure>
+        <figure class="testi-card reveal">
+          <blockquote>“Their farmland leasing program is seamless and profitable.”</blockquote>
+          <figcaption><strong>Investor Chika</strong><span>Investor</span></figcaption>
+        </figure>
+        <figure class="testi-card reveal">
+          <blockquote>“Ezocha's agribusiness events inspired our youth.”</blockquote>
+          <figcaption><strong>Community Leader Nkechi</strong><span>Community Leader</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ PARTNERS ============ -->
   <section class="section partners" id="partners">
     <div class="container">
@@ -195,23 +294,89 @@
     </div>
   </section>
 
+  <!-- ============ FAQ ============ -->
+  <section class="section faq" id="faq">
+    <div class="container faq-inner">
+      <p class="eyebrow reveal">Frequently Asked Questions</p>
+      <h2 class="section-title reveal">Everything you need to know</h2>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">How does farmland leasing work?<span aria-hidden="true">+</span></button>
+          <div class="faq-a"><p>We lease farmland for food production and job security. Tell us the size and area you need, and we will match you with suitable land and a management plan.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">What training do you offer?<span aria-hidden="true">+</span></button>
+          <div class="faq-a"><p>Formal and informal training, workshops, consultancy and extension services — tailored to individuals, cooperatives, institutions and organizations.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">What farm inputs can I buy from you?<span aria-hidden="true">+</span></button>
+          <div class="faq-a"><p>Certified seeds, seedlings, fertilizers, agrochemicals and improved technologies — quality guaranteed, scientifically and technologically improved.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">What produce do you process and package?<span aria-hidden="true">+</span></button>
+          <div class="faq-a"><p>Sweet potatoes, millet, sorghum and more. We add value to produce so you earn premium prices and lose less to post-harvest waste.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">Can Ezocha set up and manage a farm for me?<span aria-hidden="true">+</span></button>
+          <div class="faq-a"><p>Yes. We establish and professionally manage crop farms, livestock farms and agroforestry projects for individuals, companies and institutions.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">How do I get started?<span aria-hidden="true">+</span></button>
+          <div class="faq-a"><p>Call 0803 500 4617, message us on WhatsApp, or send a message through the form below. Tell us what you need and we will take it from there.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ CONTACT ============ -->
   <section class="section contact" id="contact">
-    <div class="container contact-inner">
+    <div class="container">
       <p class="eyebrow reveal">Get in Touch</p>
       <h2 class="reveal">Let’s grow something together.</h2>
-      <p class="reveal">Whether you want to establish a farm, train your team, source quality inputs or find buyers for your produce — start the conversation today.</p>
-      <div class="contact-cards">
-        <a class="contact-card reveal" href="tel:+2348035004617">
-          <span class="contact-icon">📞</span>
-          <strong>Call Us</strong>
-          <span>0803 500 4617</span>
-        </a>
-        <a class="contact-card reveal" href="mailto:learnder@gmail.com">
-          <span class="contact-icon">✉️</span>
-          <strong>Email Us</strong>
-          <span>learnder@gmail.com</span>
-        </a>
+      <p class="contact-sub reveal">Whether you want to establish a farm, train your team, source quality inputs or find buyers for your produce — start the conversation today.</p>
+      <div class="contact-grid">
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <label>Your name
+            <input type="text" id="cfName" placeholder="e.g. Adaeze Okafor" required />
+          </label>
+          <label>Phone (optional)
+            <input type="tel" id="cfPhone" placeholder="e.g. 0803 000 0000" />
+          </label>
+          <label>What do you need?
+            <select id="cfService">
+              <option>Farming Operations</option>
+              <option>Capacity Building &amp; Training</option>
+              <option>Farm Establishment &amp; Management</option>
+              <option>Farm Inputs Supply</option>
+              <option>Processing &amp; Packaging</option>
+              <option>Agribusiness &amp; Market Linkages</option>
+              <option>Farmland Leasing</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label>Your message
+            <textarea id="cfMessage" rows="4" placeholder="Tell us what you need…" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Send via WhatsApp</button>
+          <p class="form-note" id="formNote" role="status"></p>
+        </form>
+        <div class="contact-side">
+          <a class="contact-card reveal" href="tel:+2348035004617">
+            <span class="contact-icon">📞</span>
+            <strong>Call Us</strong>
+            <span>0803 500 4617</span>
+          </a>
+          <a class="contact-card reveal" href="mailto:learnder@gmail.com">
+            <span class="contact-icon">✉️</span>
+            <strong>Email Us</strong>
+            <span>learnder@gmail.com</span>
+          </a>
+          <a class="contact-card reveal" href="https://wa.me/2348035004617?text=Hello%20Ezocha%20Farm%20Services%20Ltd%2C%20I%27d%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener">
+            <span class="contact-icon">💬</span>
+            <strong>WhatsApp Us</strong>
+            <span>Chat with us directly</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -226,8 +391,10 @@
       <nav class="footer-links" aria-label="Footer">
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#produce">Produce</a>
         <a href="#why-us">Why Us</a>
         <a href="#partners">Partners</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="footer-contact">
@@ -240,6 +407,14 @@
       <span>Empowering Agriculture • Transforming Communities • Securing the Future</span>
     </div>
   </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/2348035004617?text=Hello%20Ezocha%20Farm%20Services%20Ltd%2C%20I%27d%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat with Ezocha Farm Services Ltd on WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8.9 3.9 1.5 6.3 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 22.2c-2 0-3.9-.5-5.5-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4C5.4 18.1 5 16.6 5 15 5 8.9 9.9 4.8 16 4.8S27 8.9 27 15 22.1 25.2 16 25.2zm6.3-8.2c-.3-.2-2-1-2.3-1.1-.3-.1-.6-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.2-.8.1-.3-.2-1.4-.5-2.7-1.7-1-1-1.7-2.1-1.9-2.5-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.8-1.9-1.1-2.6-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.1 3.1 1.3 3.3c.2.2 2.2 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.2-1.5.2-.8.2-1.4.2-1.5-.1-.2-.3-.2-.7-.4z"/></svg>
+  </a>
+
+  <!-- Back to top -->
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
 
   <script src="script.js"></script>
 </body>
