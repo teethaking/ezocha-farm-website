@@ -50,7 +50,7 @@
   }
 
   // Staggered entrances inside grids: children pop in one after another.
-  document.querySelectorAll(".obj-grid, .svc-grid, .produce-grid, .testi-grid, .partner-grid, .why-list, .stats-grid").forEach(function (grid) {
+  document.querySelectorAll(".obj-grid, .svc-grid, .produce-grid, .testi-grid, .partner-grid, .why-list, .stats-grid, .gallery-grid, .partner-photos, .watch-grid").forEach(function (grid) {
     Array.prototype.forEach.call(grid.children, function (child, i) {
       child.style.transitionDelay = Math.min(i * 90, 540) + "ms";
     });
@@ -177,6 +177,81 @@
       "Message: " + message;
     note.textContent = "Opening WhatsApp…";
     window.open("https://wa.me/2348035004617?text=" + encodeURIComponent(text), "_blank");
+  });
+
+  // Gallery filters
+  var filterBtns = document.querySelectorAll(".filter-btn");
+  var galleryItems = Array.prototype.slice.call(document.querySelectorAll(".gallery-item"));
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      filterBtns.forEach(function (b) {
+        b.classList.remove("active");
+        b.setAttribute("aria-pressed", "false");
+      });
+      btn.classList.add("active");
+      btn.setAttribute("aria-pressed", "true");
+      var f = btn.getAttribute("data-filter");
+      galleryItems.forEach(function (item) {
+        var show = f === "all" || item.getAttribute("data-cat") === f;
+        item.classList.toggle("hide", !show);
+      });
+    });
+  });
+
+  // Photo lightbox (keyboard: Esc to close, arrows to move)
+  var lightbox = document.getElementById("lightbox");
+  var lightboxImg = document.getElementById("lightboxImg");
+  var lightboxCaption = document.getElementById("lightboxCaption");
+  var currentIndex = 0;
+  var visibleItems = function () {
+    return galleryItems.filter(function (it) { return !it.classList.contains("hide"); });
+  };
+  var showPhoto = function (index) {
+    var items = visibleItems();
+    if (!items.length) return;
+    currentIndex = ((index % items.length) + items.length) % items.length;
+    var img = items[currentIndex].querySelector("img");
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = items[currentIndex].getAttribute("data-caption") || img.alt;
+    lightboxImg.classList.remove("zoom");
+    void lightboxImg.offsetWidth;
+    lightboxImg.classList.add("zoom");
+  };
+  var openLightbox = function (item) {
+    var items = visibleItems();
+    var idx = items.indexOf(item);
+    if (idx < 0) return;
+    showPhoto(idx);
+    lightbox.hidden = false;
+    requestAnimationFrame(function () { lightbox.classList.add("open"); });
+    document.body.style.overflow = "hidden";
+  };
+  var closeLightbox = function () {
+    lightbox.classList.remove("open");
+    document.body.style.overflow = "";
+    setTimeout(function () { lightbox.hidden = true; }, 300);
+  };
+  galleryItems.forEach(function (item) {
+    item.addEventListener("click", function () { openLightbox(item); });
+  });
+  document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+  document.getElementById("lightboxPrev").addEventListener("click", function (e) {
+    e.stopPropagation();
+    showPhoto(currentIndex - 1);
+  });
+  document.getElementById("lightboxNext").addEventListener("click", function (e) {
+    e.stopPropagation();
+    showPhoto(currentIndex + 1);
+  });
+  lightbox.addEventListener("click", function (e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (lightbox.hidden) return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") showPhoto(currentIndex - 1);
+    if (e.key === "ArrowRight") showPhoto(currentIndex + 1);
   });
 
   // Footer year
